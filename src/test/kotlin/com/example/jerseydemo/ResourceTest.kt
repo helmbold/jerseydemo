@@ -25,7 +25,7 @@ class ResourceTest {
     }
 
     @Test
-    fun testCustomerLocationOnPost() {
+    fun testWithJerseyClient() {
         val client = ClientBuilder.newClient()
         val response = client.target("http://localhost:8080/demo").request().get()
         assertThat(response.status).isEqualTo(200)
