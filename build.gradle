@@ -43,6 +43,9 @@ dependencies {
 	testCompile("org.springframework.boot:spring-boot-starter-test") {
 		exclude group: "junit", module: "junit"
 	}
+    testCompile('org.springframework.boot:spring-boot-starter-webflux')
+	implementation("io.projectreactor:reactor-bom:Bismuth-SR9")
+	testCompile "io.projectreactor:reactor-test"
 	testCompile("org.junit.jupiter:junit-jupiter-api")
 	testRuntime("org.junit.jupiter:junit-jupiter-engine")
 }
